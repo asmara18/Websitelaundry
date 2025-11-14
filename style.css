@@ -1,0 +1,244 @@
+/* Import Font dari Google Fonts: Poppins untuk tampilan modern */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* --- Variabel Warna --- */
+:root {
+    --primary-color: #007bff; /* Biru Cerah - Mewakili kebersihan dan kepercayaan */
+    --secondary-color: #2ECC71; /* Hijau Segar - Untuk promo/gratis */
+    --accent-color: #FFC107; 
+    --background-light: #F8F9FA; 
+    --background-card: #FFFFFF; 
+    --text-dark: #333333; 
+    --border-light: #E0E0E0;
+}
+
+/* --- Reset dan Dasar --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.5em; /* Judul lebih besar */
+}
+
+/* Informasi Profil di Header */
+.profile-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex; 
+    gap: 30px;
+}
+
+.form-section, .data-section {
+    background-color: var(--background-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-section {
+    flex: 1; 
+    max-width: 350px;
+    align-self: flex-start;
+}
+
+.data-section {
+    flex: 3; 
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* --- Box Informasi Promo (di bagian form) --- */
+.promo-box {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #D4EDDA; /* Latar hijau muda */
+    color: #155724; /* Teks hijau tua */
+    border: 1px solid #C3E6CB;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+/* --- Box Layanan (di bagian data) --- */
+.layanan-box {
+    background-color: #F0F8FF; /* Latar biru muda */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary-color);
+}
+.layanan-box h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.layanan-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+.layanan-box li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+
+/* --- Form Style (Dipertahankan) --- */
+#laundry-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 400;
+    color: var(--text-dark);
+    font-size: 0.95em;
+}
+
+#laundry-form input,
+#laundry-form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+#laundry-form input:focus,
+#laundry-form select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+#laundry-form button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 25px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#laundry-form button[type="submit"]:hover {
+    background-color: #27AE60;
+    transform: translateY(-1px);
+}
+
+/* --- Tabel Data Style (Dipertahankan) --- */
+#data-tabel {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0;
+    margin-top: 20px;
+    font-size: 0.9em; /* Ukuran font sedikit dikecilkan agar banyak kolom muat */
+}
+
+#data-tabel th, #data-tabel td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+}
+
+#data-tabel th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Rounding Sudut Tabel */
+#data-tabel thead tr th:first-child { border-top-left-radius: 8px; }
+#data-tabel thead tr th:last-child { border-top-right-radius: 8px; }
+
+#data-tabel tbody tr:hover {
+    background-color: #f0f8ff; 
+}
+
+/* --- Styling Status (Dipertahankan) --- */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.85em;
+    display: inline-block;
+}
+
+.status-proses {
+    background-color: #FFF3CD;
+    color: #856404;
+}
+.status-siapambil { /* Perhatikan nama class tanpa tanda hubung */
+    background-color: #D1ECF1;
+    color: #0C5460;
+}
+.status-selesai {
+    background-color: #D4EDDA;
+    color: #155724;
+}
+
+/* --- Styling Tombol Aksi (Dipertahankan) --- */
+.edit-btn, .delete-btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.edit-btn {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background-color: #DC3545; 
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--text-dark);
+    color: var(--background-light);
+    font-size: 0.85em;
+    margin-top: 40px;
+}

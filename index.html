@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Laundry - Sistem Kasir</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🧺 Bright Laundry</h1>
+        <p>Sistem Input Transaksi Pelanggan</p>
+
+        <div class="profile-info">
+            <p>
+                📞 **Pesan Antar Jemput:** +62 881-8682-201
+                <br>
+                📍 **Alamat:** Jl. Patih Singoranu No.171, Kragilan, Tamanan, Kec. Umbulharjo, Kota Yogyakarta, DI Yogyakarta 55191
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>➕ Input Transaksi</h2>
+            <form id="laundry-form">
+                <label for="nama">Nama Pelanggan:</label>
+                <input type="text" id="nama" name="nama" required placeholder="Cth: Budi Santoso">
+
+                <label for="berat">Berat (kg):</label>
+                <input type="number" id="berat" name="berat" min="1" required placeholder="Minimal 1 kg">
+
+                <label for="layanan">Pilih Layanan:</label>
+                <select id="layanan" name="layanan" required>
+                    <option value="reguler">Reguler (2-3 Hari)</option>
+                    <option value="kilat">Kilat (1 Hari)</option>
+                    <option value="express">Express (6 Jam)</option>
+                </select>
+
+                <label for="parfum">Pilih Parfum (Gratis):</label>
+                <input type="text" id="parfum" name="parfum" placeholder="Cth: Sakura / Ocean Blue (Opsional)">
+
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="proses">Proses</option>
+                    <option value="siap-ambil">Siap Ambil</option>
+                    <option value="selesai">Selesai</option>
+                </select>
+
+                <button type="submit">Tambah Transaksi</button>
+            </form>
+            
+            <div class="promo-box">
+                ✅ **Gratis Antar Jemput**
+                <br>
+                ✅ **Pilih Parfum Suka Suka (Gratis)**
+            </div>
+        </section>
+
+        <section class="data-section">
+            <h2>📊 Data Transaksi Terbaru</h2>
+            <div class="layanan-box">
+                <h3>Jenis Layanan Bright Laundry</h3>
+                <ul>
+                    <li>**Reguler:** 2-3 Hari</li>
+                    <li>**Kilat:** 1 Hari</li>
+                    <li>**Express:** 6 Jam</li>
+                </ul>
+            </div>
+            
+            <table id="data-tabel">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Pelanggan</th>
+                        <th>Berat (kg)</th>
+                        <th>Layanan</th>
+                        <th>Parfum</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bright Laundry | Powered by Sistem Kasir Sederhana</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
